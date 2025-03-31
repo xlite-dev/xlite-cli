@@ -24,7 +24,7 @@
 
 ## Introduction
 
-The Lite.AI.ToolKit Executable Version is an all-in-one AI application tool developed based on [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit), allowing users to access over 100 popular AI models without coding. This tool packages complex AI technologies into simple command-line calls, making advanced AI accessible to everyone.
+xlite-cli is a command-line tool developed based on [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit), allowing users to access over 100 popular AI models without coding. This tool packages complex AI technologies into simple command-line calls, making advanced AI accessible to everyone.
 
 ## Features
 

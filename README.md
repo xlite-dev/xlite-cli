@@ -1,5 +1,3 @@
-## xlite-cli
-
 ![lite-ai-toolkit](https://github.com/user-attachments/assets/11568474-57e3-4ef7-96c0-d2ce7028bb5f)
 
 <div align='center'>
@@ -24,7 +22,7 @@
 
 ## 简介
 
-Lite.AI.ToolKit 可执行程序版本是基于 [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit) 开发的一站式 AI 应用工具，无需编程即可使用 100 多个流行的 AI 模型。本工具将复杂的 AI 技术封装成简单易用的命令行调用，让普通用户也能轻松体验最先进的 AI 技术。
+xlite-cli是基于 [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit) 开发的命令行工具，无需编程即可使用 100 多个流行的 AI 模型。本工具将复杂的 AI 技术封装成简单易用的命令行调用，让普通用户也能轻松体验最先进的 AI 技术。
 
 ## 特点
 
