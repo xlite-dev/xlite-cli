@@ -24,14 +24,14 @@
 
 ## Introduction
 
-The Lite.AI.ToolKit Executable Version is an all-in-one AI application tool developed based on [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit), allowing users to access over 100 popular AI models without coding. This tool packages complex AI technologies into a simple and user-friendly interface, making advanced AI accessible to everyone.
+The Lite.AI.ToolKit Executable Version is an all-in-one AI application tool developed based on [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit), allowing users to access over 100 popular AI models without coding. This tool packages complex AI technologies into simple command-line calls, making advanced AI accessible to everyone.
 
 ## Features
 
-- **User-Friendly**: Graphical interface operation, no programming knowledge required
-- **Rich Model Collection**: Contains 100+ excellent AI models covering object detection, face recognition, image segmentation, and more
+- **User-Friendly**: Direct command-line operation, no programming knowledge required
+- **Rich Model Collection**: Contains 100+ excellent AI models covering object detection, face recognition, image segmentation, Stable Diffusion and more
 - **High Performance**: Supports GPU/CPU acceleration for fast operation
-- **Cross-Platform**: Works on Windows, Linux, and macOS
+- **Cross-Platform**: Currently only supports Linux platform, with future support planned for macOS and Windows
 
 ## Supported Functions
 
@@ -43,20 +43,21 @@ The Lite.AI.ToolKit Executable Version is an all-in-one AI application tool deve
 - **Image Matting**: RobustVideoMatting, MODNet, etc.
 - **Image Stylization**: Photo to cartoon, fast style transfer, etc.
 - **Image Classification**: EfficientNet, MobileNetV2, ResNet, etc.
+- **Image Generation**: Currently supports TXT2IMG and IMG2IMG, with plans to add LORA and ControlNet functionality in the future
 
 ## Quick Start
 
 1. Download the latest version from [Releases](https://github.com/xlite-dev/lite.ai.toolkit-exe/releases)
 2. Extract the files
-3. Run the executable file `lite.ai.toolkit-exe`
-4. Select the desired AI function through the interface and upload an image or video
-5. Click "Run" to get the AI processing results
+3. Run the executable file `xlite-cli`
+4. Select the desired algorithm using command-line parameters
+5. Specify input and output to get the final result
 
 ## System Requirements
 
-- **Operating System**: Windows 10/11, Linux, macOS
+- **Operating System**: Currently supports Linux
 - **RAM**: At least 4GB (8GB or more recommended)
-- **Storage**: At least 1GB of available space
+- **Storage**: At least 10GB of available space
 - **GPU**: Optional, NVIDIA graphics card with CUDA support for better performance
 
 ## License

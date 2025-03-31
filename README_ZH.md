@@ -1,4 +1,4 @@
- # Lite.AI.ToolKit 可执行程序版本
+# Lite.AI.ToolKit 可执行程序版本
 
 ![lite-ai-toolkit](https://github.com/user-attachments/assets/11568474-57e3-4ef7-96c0-d2ce7028bb5f)
 
@@ -24,14 +24,14 @@
 
 ## 简介
 
-Lite.AI.ToolKit 可执行程序版本是基于 [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit) 开发的一站式 AI 应用工具，无需编程即可使用 100 多个流行的 AI 模型。本工具将复杂的 AI 技术封装成简单易用的界面，让普通用户也能轻松体验最先进的 AI 技术。
+Lite.AI.ToolKit 可执行程序版本是基于 [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit) 开发的一站式 AI 应用工具，无需编程即可使用 100 多个流行的 AI 模型。本工具将复杂的 AI 技术封装成简单易用的命令行调用，让普通用户也能轻松体验最先进的 AI 技术。
 
 ## 特点
 
-- **简单易用**: 图形化界面操作，无需编程知识
-- **丰富的模型**: 包含 100+ 优秀 AI 模型，涵盖目标检测、人脸识别、图像分割等多个领域
+- **简单易用**: 命令行直接调用，无需编程知识
+- **丰富的模型**: 包含 100+ 优秀 AI 模型，涵盖目标检测、人脸识别、图像分割以及SD等多个领域
 - **高性能**: 支持 GPU/CPU 加速，运行速度快
-- **跨平台**: 支持 Windows、Linux 和 macOS
+- **跨平台**: 目前仅支持Linux平台,后续会支持MACOS以及Windows平台
 
 ## 支持的功能
 
@@ -43,20 +43,22 @@ Lite.AI.ToolKit 可执行程序版本是基于 [Lite.AI.ToolKit](https://github.
 - **图像抠图**: RobustVideoMatting、MODNet 等
 - **图像风格化**: 照片转卡通、快速风格迁移等
 - **图像分类**: EfficientNet、MobileNetV2、ResNet 等
+- **图像生成**: 目前支持TXT2IMG和IMG2IMG,后续会继续添加LORA以及ControlNet等功能
+
 
 ## 快速开始
 
 1. 从 [Releases](https://github.com/xlite-dev/lite.ai.toolkit-exe/releases) 下载最新版本
 2. 解压缩文件
-3. 运行可执行文件 `lite.ai.toolkit-exe`
-4. 通过界面选择所需的 AI 功能并上传图片或视频
-5. 点击"运行"获取 AI 处理结果
+3. 运行可执行文件 `xlite-cli`
+4. 通过命令行参数选择对应的算法
+5. 指定输入和输出得到最终结果
 
 ## 系统要求
 
-- **操作系统**: Windows 10/11, Linux, macOS
+- **操作系统**: 目前支持 Linux
 - **RAM**: 至少 4GB (推荐 8GB 以上)
-- **存储空间**: 至少 1GB 可用空间
+- **存储空间**: 至少 10GB 可用空间
 - **GPU**: 可选，支持 CUDA 的 NVIDIA 显卡可获得更好性能
 
 ## 许可证
