@@ -1,4 +1,4 @@
-# Lite.AI.ToolKit 可执行程序版本
+## xlite-cli
 
 ![lite-ai-toolkit](https://github.com/user-attachments/assets/11568474-57e3-4ef7-96c0-d2ce7028bb5f)
 
