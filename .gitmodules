@@ -1,0 +1,3 @@
+[submodule "lite.ai.toolkit"]
+	path = lite.ai.toolkit
+	url = https://github.com/xlite-dev/lite.ai.toolkit.git
