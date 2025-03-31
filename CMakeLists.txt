@@ -25,6 +25,10 @@ set(OnnxRuntime_DIR ${THIRD_PARTY_PATH}/onnxruntime)
 include_directories(${OnnxRuntime_DIR}/include)
 link_directories(${OnnxRuntime_DIR}/lib)
 
+# 添加 gflags 依赖
+find_package(gflags REQUIRED)
+include_directories(${gflags_INCLUDE_DIRS})
+
 # 设置OpenCV
 set(OpenCV_Version "4.9.0-ffmpeg4.2.2")
 set(OpenCV_DIR ${THIRD_PARTY_PATH}/opencv)
@@ -58,6 +62,7 @@ target_link_libraries(xlite-cli
     ${lite.ai.toolkit_LIBS}
     ${OpenCV_LIBS}
     onnxruntime
+    gflags
     -L${lite.ai.toolkit_LIB_DIR}
     -L${OnnxRuntime_DIR}/lib
     -L${OpenCV_DIR}/lib
