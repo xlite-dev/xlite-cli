@@ -14,7 +14,8 @@ void print_help() {
     std::cout << "Usage: xlite-cli [COMMAND] [FLAGS]" << std::endl;
     std::cout << std::endl;
     std::cout << "Commands:" << std::endl;
-    std::cout << "  face_detect      Face detection using YOLOV8Face" << std::endl;
+    std::cout << "  face_detect      Face detection" << std::endl;
+    std::cout << "  face_change      Face Change" << std::endl;
     std::cout << "  help             Show this help message" << std::endl;
     std::cout << std::endl;
     std::cout << "For command-specific help, run: xlite-cli COMMAND --help" << std::endl;
