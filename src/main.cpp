@@ -3,6 +3,7 @@
 #include <functional>
 #include <gflags/gflags.h>
 #include "xlite_cli/commands/face_detect.h"
+#include "xlite_cli/commands/face_change.h"
 // 其他命令头文件
 
 // 不再定义help和version标志，使用gflags内置的标志
@@ -64,6 +65,7 @@ int main(int argc, char *argv[]) {
     // 命令处理映射
     std::map<std::string, std::function<int(int, char**)>> command_handlers = {
         {"face_detect", xlite_cli::commands::handle_face_detect},
+        {"face_change",xlite_cli::commands::handle_face_change},
         {"help", [](int, char**) { print_help(); return 0; }}
     };
     
