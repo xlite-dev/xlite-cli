@@ -60,6 +60,13 @@ xlite-cli is a command-line tool developed based on [Lite.AI.ToolKit](https://gi
 - **Storage**: At least 10GB of available space
 - **GPU**: Optional, NVIDIA graphics card with CUDA support for better performance
 
+## Model Download Links
+
+| Model Category | Download Link |
+|---------------|---------------|
+| FaceChange | [Google Drive](https://drive.google.com/drive/folders/xxx) |
+| SD         | [Google Drive](https://drive.google.com/drive/folders/1ol8snB_LKvLcpC3v69jY9YOsZ0m_PmVc?usp=share_link) |
+
 ## License
 
 GNU General Public License v3.0

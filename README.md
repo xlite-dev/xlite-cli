@@ -59,6 +59,13 @@ xlite-cli是基于 [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolki
 - **存储空间**: 至少 10GB 可用空间
 - **GPU**: 可选，支持 CUDA 的 NVIDIA 显卡可获得更好性能
 
+## 模型下载链接
+
+| 模型类别 | 下载链接 |
+|---------|---------|
+| FaceChange | [Google Drive](https://drive.google.com/drive/folders/xxx) |
+| SD         | [Google Drive](https://drive.google.com/drive/folders/1ol8snB_LKvLcpC3v69jY9YOsZ0m_PmVc?usp=share_link) |
+
 ## 许可证
 
 GNU General Public License v3.0
