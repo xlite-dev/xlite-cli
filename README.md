@@ -63,7 +63,7 @@ xlite-cli是基于 [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolki
 
 | 模型类别 | 下载链接 |
 |---------|---------|
-| FaceChange | [Google Drive](https://drive.google.com/drive/folders/xxx) |
+| FaceChange | [Google Drive](https://drive.google.com/drive/folders/1iAUUr_35qkwVrhPJ6gSdbgSjahEqG-DQ?usp=sharing) |
 | SD         | [Google Drive](https://drive.google.com/drive/folders/1ol8snB_LKvLcpC3v69jY9YOsZ0m_PmVc?usp=share_link) |
 
 ## 许可证
