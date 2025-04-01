@@ -83,6 +83,7 @@ add_custom_command(TARGET xlite-cli POST_BUILD
     ${OpenCV_DIR}/lib/libopencv_calib3d.so.4.9.0
     ${CMAKE_SOURCE_DIR}/build/test_lite_age_googlenet.jpg
     ${CMAKE_SOURCE_DIR}/build/yoloface_8n.onnx
+    ${CMAKE_SOURCE_DIR}/build/yoloface_8n_fp32.engine
     ${CMAKE_BINARY_DIR}
 )
 
