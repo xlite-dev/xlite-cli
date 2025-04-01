@@ -6,7 +6,7 @@
 
 // 为face_detect命令定义标志
 static bool face_detect_command = false;
-DEFINE_string(model, "../lite.ai.toolkit/examples/hub/onnx/cv/yoloface_8n.onnx", 
+DEFINE_string(model, "/home/lite.ai.toolkit/examples/hub/trt/yoloface_8n_fp16.engine",
               "Path to the face detection model (ONNX format)");
 DEFINE_string(input, "", "Input image path (required)");
 DEFINE_string(output, "result.jpg", "Output image path");
@@ -39,15 +39,16 @@ int handle_face_detect(int argc, char** argv) {
         }
         
         // 创建YOLOV8Face检测器
-        auto* yolov8_face = new lite::cv::face::detect::YOLOV8Face(FLAGS_model);
-        if (!yolov8_face) {
+//        auto* yolov8_face = new lite::cv::face::detect::YOLOV8Face(FLAGS_model);
+        lite::trt::cv::face::detection::YOLOV8Face *yolov8face_trt  = new lite::trt::cv::face::detection::YOLOV8Face(FLAGS_model);
+        if (!yolov8face_trt) {
             std::cerr << "Error: Failed to create YOLOV8Face detector" << std::endl;
             return 1;
         }
         
         // 执行检测
         std::vector<lite::types::Boxf> detected_boxes;
-        yolov8_face->detect(img_bgr, detected_boxes, FLAGS_conf, FLAGS_iou);
+        yolov8face_trt->detect(img_bgr, detected_boxes, FLAGS_conf, FLAGS_iou);
         
         // 绘制结果
         lite::utils::draw_boxes_inplace(img_bgr, detected_boxes);
@@ -59,8 +60,7 @@ int handle_face_detect(int argc, char** argv) {
         std::cout << "Result saved to: " << FLAGS_output << std::endl;
         
         // 释放资源
-        delete yolov8_face;
-        
+        delete yolov8face_trt;
         return 0;
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
