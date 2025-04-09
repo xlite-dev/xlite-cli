@@ -24,34 +24,49 @@
 
 ## Introduction
 
-xlite-cli is a command-line tool developed based on [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit), allowing users to access over 100 popular AI models without coding. This tool packages complex AI technologies into simple command-line calls, making advanced AI accessible to everyone.
+xlite-cli is a command-line tool developed based on [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit). It currently supports face-swapping algorithms and SD's text-to-image and image-to-image functionalities. The currently supported framework is TensorRT, with specific version requirements that can be [referenced here](https://github.com/xlite-dev/lite.ai.toolkit/blob/main/docs/tensorrt/tensorrt-linux-x86_64.zh.md).
 
 ## Features
 
-- **User-Friendly**: Direct command-line operation, no programming knowledge required
-- **Rich Model Collection**: Contains 100+ excellent AI models covering object detection, face recognition, image segmentation, Stable Diffusion and more
-- **High Performance**: Supports GPU/CPU acceleration for fast operation
-- **Cross-Platform**: Currently only supports Linux platform, with future support planned for macOS and Windows
+- **Easy to Use**: Direct command-line calls, can invoke dynamic libraries across languages
+- **High Performance**: High-speed inference using TensorRT framework, pre- and post-processing rewritten with CUDA
+- **Cross-Platform**: Currently only supports Linux, with possible future support for Windows
+- **Multi-Framework**: Currently only supports TensorRT, with potential future support for MNN framework for deployment on edge devices
 
 ## Supported Functions
 
-- **Object Detection**: YOLOv5, YOLOv6, YOLOv8, YOLOX, etc.
-- **Face Recognition**: ArcFace, FaceNet, MobileFaceNet, etc.
-- **Face Detection**: SCRFD, RetinaFace, UltraFace, etc.
-- **Face Attribute Analysis**: Age, gender, emotion recognition, etc.
-- **Image Segmentation**: DeepLabV3, FCN, portrait segmentation, etc.
-- **Image Matting**: RobustVideoMatting, MODNet, etc.
-- **Image Stylization**: Photo to cartoon, fast style transfer, etc.
-- **Image Classification**: EfficientNet, MobileNetV2, ResNet, etc.
-- **Image Generation**: Currently supports TXT2IMG and IMG2IMG, with plans to add LORA and ControlNet functionality in the future
+- **Face Swapping**: Currently supports face selection
+- **SD**: Currently supports TXT2IMG and IMG2IMG, with plans to add LORA and ControlNet functionalities in the future
 
 ## Quick Start
 
-1. Download the latest version from [Releases](https://github.com/xlite-dev/lite.ai.toolkit-exe/releases)
+1. Download the latest version from [Releases](https://github.com/xlite-dev/lite.ai.toolkit-exe/releases) (currently considering how to create executable files)
+   ```bash
+   wget https://github.com/xlite-dev/lite.ai.toolkit-exe/releases/download/v0.3.1/xlite-cli-linux-x86_64.tar.gz
+   ```
+
 2. Extract the files
-3. Run the executable file `xlite-cli`
-4. Select the desired algorithm using command-line parameters
-5. Specify input and output to get the final result
+   ```bash
+   tar -xzvf xlite-cli-linux-x86_64.tar.gz
+   cd xlite-cli
+   ```
+
+3. Add execution permissions
+   ```bash
+   chmod +x xlite-cli
+   ```
+
+4. Run the executable file
+   ```bash
+   ./xlite-cli --help  # View help information
+   ```
+
+5. Example: Run face-swapping algorithm
+   ```bash
+   ./xlite-cli facechange --model_folder path/to/face_change_model --input_src source.jpg --src_index 0 --input_target target.jpg --target_index 1 --face_change_output face_change_result.jpg
+   ```
+
+### Command-line Examples
 
 ## System Requirements
 
@@ -75,4 +90,4 @@ GNU General Public License v3.0
 
 Thanks to the [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit) project for providing an excellent collection of AI models, and to all open source contributors for their hard work.
 
-[中文版](README_ZH.md) | [日本語版](README_JA.md)
+[中文版](README.md) | [日本語版](README_JA.md)

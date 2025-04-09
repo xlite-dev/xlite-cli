@@ -24,34 +24,49 @@
 
 ## 紹介
 
-xlite-cliは、[Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit) をベースに開発されたコマンドラインツールで、コーディング不要で100以上の人気AIモデルを利用できます。このツールは複雑なAI技術をシンプルなコマンドライン呼び出しにパッケージ化し、一般ユーザーでも最先端のAI技術を簡単に体験できるようにしています。
+xlite-cliは、[Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit)をベースに開発されたコマンドラインツールです。現在は顔交換アルゴリズムとSDのテキスト生成画像および画像生成画像の機能をサポートしています。現在サポートされているフレームワークはTensorRTで、具体的なバージョン要件は[こちら](https://github.com/xlite-dev/lite.ai.toolkit/blob/main/docs/tensorrt/tensorrt-linux-x86_64.zh.md)を参照してください。
 
 ## 特徴
 
-- **使いやすさ**: コマンドラインでの直接操作、プログラミング知識不要
-- **豊富なモデル**: 物体検出、顔認識、画像セグメンテーション、Stable Diffusionなど、100以上の優れたAIモデルを収録
-- **高性能**: GPU/CPUアクセラレーションをサポートし、高速に動作
-- **クロスプラットフォーム**: 現在はLinuxプラットフォームのみをサポート、今後macOSとWindowsのサポートを予定
+- **使いやすさ**: コマンドラインから直接呼び出し、言語を超えて動的ライブラリを呼び出すことが可能
+- **高パフォーマンス**: TensorRTフレームワークを使用した高速推論、CUDAで書き直された前処理と後処理
+- **クロスプラットフォーム**: 現在はLinuxのみをサポート、将来的にWindowsをサポートする可能性あり
+- **マルチフレームワーク**: 現在はTensorRTのみをサポート、将来的にエッジデバイスでの展開を容易にするためにMNNフレームワークをサポートする可能性あり
 
 ## サポートされる機能
 
-- **物体検出**: YOLOv5、YOLOv6、YOLOv8、YOLOXなど
-- **顔認識**: ArcFace、FaceNet、MobileFaceNetなど
-- **顔検出**: SCRFD、RetinaFace、UltraFaceなど
-- **顔属性分析**: 年齢、性別、表情認識など
-- **画像セグメンテーション**: DeepLabV3、FCN、人物セグメンテーションなど
-- **画像マッティング**: RobustVideoMatting、MODNetなど
-- **画像スタイル変換**: 写真から漫画、高速スタイル変換など
-- **画像分類**: EfficientNet、MobileNetV2、ResNetなど
-- **画像生成**: 現在はTXT2IMGとIMG2IMGをサポート、今後LORAやControlNetなどの機能を追加予定
+- **顔交換**: 現在、顔選択をサポート
+- **SD**: 現在、TXT2IMGとIMG2IMGをサポート。今後、LORAやControlNetなどの機能を追加予定
 
 ## クイックスタート
 
-1. [Releases](https://github.com/xlite-dev/lite.ai.toolkit-exe/releases) から最新バージョンをダウンロード
+1. [Releases](https://github.com/xlite-dev/lite.ai.toolkit-exe/releases)から最新バージョンをダウンロード（現在、実行可能ファイルの作成方法を検討中）
+   ```bash
+   wget https://github.com/xlite-dev/lite.ai.toolkit-exe/releases/download/v0.3.1/xlite-cli-linux-x86_64.tar.gz
+   ```
+
 2. ファイルを解凍
-3. 実行ファイル `xlite-cli` を実行
-4. コマンドラインパラメータで目的のアルゴリズムを選択
-5. 入力と出力を指定して最終結果を取得
+   ```bash
+   tar -xzvf xlite-cli-linux-x86_64.tar.gz
+   cd xlite-cli
+   ```
+
+3. 実行権限を追加
+   ```bash
+   chmod +x xlite-cli
+   ```
+
+4. 実行ファイルを実行
+   ```bash
+   ./xlite-cli --help  # ヘルプ情報を表示
+   ```
+
+5. 例：顔交換アルゴリズムを実行
+   ```bash
+   ./xlite-cli facechange --model_folder path/to/face_change_model --input_src source.jpg --src_index 0 --input_target target.jpg --target_index 1 --face_change_output face_change_result.jpg
+   ```
+
+### コマンドライン例
 
 ## システム要件
 
@@ -75,4 +90,4 @@ GNU General Public License v3.0
 
 優れたAIモデルコレクションを提供してくれた[Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit)プロジェクト、そして全てのオープンソース貢献者の皆様に感謝いたします。
 
-[中文版](README_ZH.md) | [English Version](README_EN.md)
+[中文版](README.md) | [English Version](README_EN.md)

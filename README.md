@@ -22,35 +22,50 @@
 
 ## 简介
 
-xlite-cli是基于 [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit) 开发的命令行工具，无需编程即可使用 100 多个流行的 AI 模型。本工具将复杂的 AI 技术封装成简单易用的命令行调用，让普通用户也能轻松体验最先进的 AI 技术。
+xlite-cli是基于 [Lite.AI.ToolKit](https://github.com/xlite-dev/lite.ai.toolkit) 开发的命令行工具,目前支持的算法为换脸算法以及SD的文生图以及图生图功能,目前支持的框架为TensorRT具体的版本要求可以[参考](https://github.com/xlite-dev/lite.ai.toolkit/blob/main/docs/tensorrt/tensorrt-linux-x86_64.zh.md)。
 
 ## 特点
 
-- **简单易用**: 命令行直接调用，无需编程知识
-- **丰富的模型**: 包含 100+ 优秀 AI 模型，涵盖目标检测、人脸识别、图像分割以及SD等多个领域
-- **高性能**: 支持 GPU/CPU 加速，运行速度快
-- **跨平台**: 目前仅支持Linux平台,后续会支持MACOS以及Windows平台
-
+- **简单易用**: 命令行直接调用,可以跨语言调用动态库实现功能
+- **高性能**: 使用TensorRT框架实现高速推理,使用CUDA重写前后处理
+- **跨平台**: 目前仅支持Linux平台,后续可能会支持Windows平台
+- **多框架**: 目前仅仅支持TensorRT,后续可能会支持MNN框架便于在边缘设备上进行部署
 ## 支持的功能
 
-- **目标检测**: YOLOv5、YOLOv6、YOLOv8、YOLOX 等
-- **人脸识别**: ArcFace、FaceNet、MobileFaceNet 等
-- **人脸检测**: SCRFD、RetinaFace、UltraFace 等
-- **人脸属性分析**: 年龄、性别、表情识别等
-- **图像分割**: DeepLabV3、FCN、人像分割等
-- **图像抠图**: RobustVideoMatting、MODNet 等
-- **图像风格化**: 照片转卡通、快速风格迁移等
-- **图像分类**: EfficientNet、MobileNetV2、ResNet 等
-- **图像生成**: 目前支持TXT2IMG和IMG2IMG,后续会继续添加LORA以及ControlNet等功能
+- **换脸**:目前支持人脸选中
+- **SD**: 目前支持TXT2IMG和IMG2IMG,后续会继续添加LORA以及ControlNet等功能
+
 
 
 ## 快速开始
 
-1. 从 [Releases](https://github.com/xlite-dev/lite.ai.toolkit-exe/releases) 下载最新版本
+1. 从 [Releases](https://github.com/xlite-dev/lite.ai.toolkit-exe/releases) 下载最新版本（目前没考虑好如何制作可执行文件）
+   ```bash
+   wget https://github.com/xlite-dev/lite.ai.toolkit-exe/releases/download/v0.3.1/xlite-cli-linux-x86_64.tar.gz
+   ```
+
 2. 解压缩文件
-3. 运行可执行文件 `xlite-cli`
-4. 通过命令行参数选择对应的算法
-5. 指定输入和输出得到最终结果
+   ```bash
+   tar -xzvf xlite-cli-linux-x86_64.tar.gz
+   cd xlite-cli
+   ```
+
+3. 添加执行权限
+   ```bash
+   chmod +x xlite-cli
+   ```
+
+4. 运行可执行文件
+   ```bash
+   ./xlite-cli --help  # 查看帮助信息
+   ```
+
+5. 举例：运行换脸算法
+   ```bash
+   ./xlite-cli facechange --model_folder path/to/face_change_model --input_src source.jpg --src_index 0 --input_target target.jpg --target_index 1 --face_change_output face_change_result.jpg
+   ```
+
+### 命令行示例
 
 ## 系统要求
 
